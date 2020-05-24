@@ -90,12 +90,18 @@ ParseFileRepository(FileRepository &repository, NLineReader &reader)
     } else if (StringIsEqual(name, "type")) {
       if (StringIsEqual(value, "airspace"))
         file.type = FileType::AIRSPACE;
+      else if (StringIsEqual(value, "waypoint-details"))
+        file.type = FileType::WAYPOINTDETAILS;
       else if (StringIsEqual(value, "waypoint"))
         file.type = FileType::WAYPOINT;
       else if (StringIsEqual(value, "map"))
         file.type = FileType::MAP;
       else if (StringIsEqual(value, "flarmnet"))
         file.type = FileType::FLARMNET;
+    } else if (StringIsEqual(name, "update")) {
+      int year, month, day;
+      sscanf(value, "%04u-%02u-%02u", &year, &month, &day);
+      file.update_date = BrokenDate(year, month, day);
     }
   }
 

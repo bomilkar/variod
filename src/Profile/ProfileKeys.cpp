@@ -95,6 +95,7 @@ const char WatchedWaypointFile[] = "WatchedWPFile"; // pL
 const char LanguageFile[] = "LanguageFile"; // pL
 const char InputFile[] = "InputFile"; // pL
 const char PilotName[] = "PilotName";
+const char CoPilotName[] = "CoPilotName";
 const char AircraftType[] = "AircraftType";
 const char AircraftReg[] = "AircraftReg";
 const char CompetitionId[] = "AircraftRego";
@@ -134,6 +135,7 @@ const char ShowMenuButton[] = "ShowMenuButton";
 const char CursorSize[] = "CursorSize";
 
 const char AppAveNeedle[] = "AppAveNeedle";
+const char AppAveThermalNeedle[] = "AppAveThermalNeedle";
 
 const char AutoAdvance[] = "AutoAdvance";
 const char UTCOffset[] = "UTCOffset";
